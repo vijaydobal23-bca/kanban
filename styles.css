@@ -74,6 +74,10 @@ section .task-column{
   flex-direction: column;
   gap: var(--padding-m);
   
+  border-radius: var(--border-radius-m);
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  
 }
 
 section .task-column .heading{
@@ -83,14 +87,42 @@ section .task-column .heading{
   justify-content: space-between;
 }
 
-
-section .task-column .task {
-  background-color: wheat;
-  padding:var(--padding-m);
-  border-radius: var(--border-radius-m);
-  display:flex;
+section .task-column .task .task-title {
+  display: flex;
   flex-direction: column;
 }
+
+section .task-column .task {
+  background-color: rgb(27, 27, 27);
+  padding:var(--padding-m);
+  border-radius: var(--border-radius-m);
+  cursor:grab;
+  
+  display:flex;
+  flex-direction: column;
+  gap:var(--padding-s);
+  width: 100%;
+}
+
+section .task-column .task button{
+  align-self:flex-end;
+  cursor: pointer;
+  padding:var(--padding-s);
+  border-radius:var(--border-radius-s);
+  border:none;
+  outline:none;
+}
+
+
+
+section .task-column.hover-over{
+  border:2px dotted white;
+  scale:1.02;
+}
+
+
+
+
 
 
 
