@@ -104,6 +104,14 @@ section .task-column .task {
   width: 100%;
 }
 
+section .task-column .task h2 {
+  overflow-wrap: anywhere;
+}
+
+section .task-column .task p {
+  overflow-wrap: anywhere;
+}
+
 section .task-column .task button{
   align-self:flex-end;
   cursor: pointer;
@@ -157,7 +165,7 @@ section .task-column.hover-over{
   background-color: wheat;
   border:none;
   outline:none;
-  color:var(--primary-text-color);
+  color:black;
   padding : var(--padding-m);
   border-radius:var(--border-radius-s);
 }
@@ -174,7 +182,16 @@ section .task-column.hover-over{
   width:fit-content;
 }
 
+@media (max-width: 700px) {
+  section {
+    height: auto;
+    flex-direction: column;
+  }
 
+  section .task-column {
+    min-height: 180px;
+  }
+}
 
 
 
