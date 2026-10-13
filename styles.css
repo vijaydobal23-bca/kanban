@@ -120,6 +120,63 @@ section .task-column.hover-over{
   scale:1.02;
 }
 
+.modal{
+  position:fixed;
+  height:100vh;
+  width:100vw;
+  top:0;
+  left:0;
+  display:none;
+  align-items:center;
+  justify-content: center;
+}
+
+.modal.active{
+  display:flex;
+}
+
+.modal .bg{
+  position:absolute;
+  height:100%;
+  width:100%;
+  backdrop-filter: blur(5px);
+}
+
+.modal .center{
+  background-color:var(--bg-button-color);
+  padding:var(--padding-l);
+  border-radius:var(--border-radius-m);
+  display:flex;
+  flex-direction:column;
+  gap:var(--padding-m);
+  z-index:10;
+
+}
+
+.modal .center input , .modal .center select{
+  background-color: wheat;
+  border:none;
+  outline:none;
+  color:var(--primary-text-color);
+  padding : var(--padding-m);
+  border-radius:var(--border-radius-s);
+}
+
+
+.modal .center button{
+  background-color: var(--bg-button-color) ;
+  border:none;
+  outline:none;
+  color:var(--primary-text-color);
+  padding:var(--padding-m);
+  cursor:pointer;
+  border-radius: var(--border-radius-m);
+  width:fit-content;
+}
+
+
+
+
 
 
 
